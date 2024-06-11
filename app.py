@@ -48,6 +48,7 @@ class PredictionOutput(BaseModel):
     """
 
     text: str
+    clean_text: str
     is_hoax: bool
 
 
