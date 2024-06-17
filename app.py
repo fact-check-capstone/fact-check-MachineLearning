@@ -25,10 +25,10 @@ def preprocess_text(text):
     Returns:
     - str: The preprocessed text.
     """
+
+    text = re.sub(r"(HOAX)|(FITNAH)|(SALAH)|(DISINFORMASI)|\[SALAH\]:?", "", text, flags=re.IGNORECASE)
     text = text.lower()
-    text = re.sub(
-        r"\(HOAX\)|\(FITNAH\)|\(SALAH\)|\(DISINFORMASI\)|\[SALAH\]|\[SALAH\]:", "", text
-    )
+
     text = re.sub(f"[{re.escape(string.punctuation)}]", "", text)
     text = re.sub(r"\d+", "", text)
     text = re.sub(r"\s+", " ", text).strip()
