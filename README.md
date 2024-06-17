@@ -36,4 +36,4 @@ Response Body
 }
 ```
 
-More about it: [http://localhost:8080/docs](http://localhost:8080/docs)
+More about the API: [http://localhost:8080/docs](http://localhost:8080/docs) (Swagger UI)
